@@ -5,7 +5,7 @@
     ------ for register user -------
     
        endpoint: /api/v1/auth/register
-       body data :
+       body json :
         {
          "username: "your_name"
          "email": "your_email"
@@ -17,7 +17,7 @@
         ----- for login ---------
         
        endpoint: /api/v1/auth/login
-       body data :
+       body json :
         {
          "email": "your_email"
          "password": "your_password"
@@ -35,7 +35,7 @@
         update post     : /api/v1/posts/update/id/:id
         delete post     : /api/v1/posts/delete/id/:id
 
-        -----  body data for create and update post -----
+        -----  body json for create and update post -----
         {
           "title" : "enter_title",
           "description" : "enter_description",
