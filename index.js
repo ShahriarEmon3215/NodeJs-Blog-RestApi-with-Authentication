@@ -1,6 +1,7 @@
 import express from 'express';
 import multer from 'multer';
 import authRoute from './routes/auth.route.js';
+import postRoute from './routes/post.route.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 var app = express(); 
@@ -33,7 +34,8 @@ var fileFilter = function (req, file, cb){
 
 
 //routes
-app.use("/api/v1/auth/", authRoute);
+app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/posts", postRoute)
 
 app.get('/', function(req, res){
     res.send("Hi there");
