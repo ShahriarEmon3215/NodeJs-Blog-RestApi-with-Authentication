@@ -37,11 +37,6 @@ var fileFilter = function (req, file, cb){
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/posts", postRoute)
 
-app.get('/', function(req, res){
-    res.send("Hi there");
-})
-
-
 
 const server = app.listen(2023, function (error){
     console.log(error);
