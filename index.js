@@ -4,12 +4,15 @@ import authRoute from './routes/auth.route.js';
 import postRoute from './routes/post.route.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+
 var app = express(); 
 
 // middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
+app.use(cors());
 
 
 // multer for uploading files
