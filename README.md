@@ -24,6 +24,11 @@
         }
         
         
+        ----------  get user data ----------
+        endpoint: /api/v1/user/getuser
+        header: 'auth-token' : "token"
+        
+        
         
 
      Blog post
