@@ -2,6 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import authRoute from './routes/auth.route.js';
 import postRoute from './routes/post.route.js';
+import userRoute from './routes/user.route.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -38,7 +39,8 @@ var fileFilter = function (req, file, cb){
 
 //routes
 app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/posts", postRoute)
+app.use("/api/v1/posts", postRoute);
+app.use("/api/v1/user", userRoute);
 
 
 const server = app.listen(2023, function (error){
